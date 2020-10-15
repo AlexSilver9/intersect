@@ -17,7 +17,10 @@ fn read_file_to_hash_set(filepath: &str) -> HashSet<String> {
     if let Ok(lines) = read_lines(filepath) {
         for line_result in lines {
             if let Ok(line) = line_result {
-                h.insert(line.to_string());
+                let line = line.trim().to_string();
+                if ! line.is_empty() {
+                    h.insert(line.trim().to_string());
+                }
             }
         }
     }
