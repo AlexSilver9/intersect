@@ -2,7 +2,8 @@
 
 Prints intersection of two files line by line.
 For comparison lines are trimmed.
-Empty lines are skipped. 
+Empty lines are skipped.
+Intersection detection is done via hashset intersection, so the output is unordered.
 
 ##### Usage
 
